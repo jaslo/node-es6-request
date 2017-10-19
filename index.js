@@ -50,6 +50,11 @@ class Request extends Duplex {
     return this;
   }
 
+  destroy() {
+    //super.destroy();
+    this._destroy();
+  }
+
   headers(obj) {
     Object.assign(this.options.headers, obj);
     return this;
